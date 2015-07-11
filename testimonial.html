@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Astrology atricles</title>
+<meta charset="utf-8">    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="img/logo.ico" type="image/x-icon">
+<link rel="shortcut icon" href="img/logo.ico" type="image/x-icon" />
+<meta name="description" content="Your description">
+<meta name="keywords" content="Your keywords">
+<meta name="author" content="Your name">
+<meta name = "format-detection" content = "telephone=no" />
+<!--CSS-->
+<link rel="stylesheet" href="css/bootstrap.css" >
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="css/flaticon/flaticon.css"> 
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Questrial"> 
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900"> 
+<link rel="stylesheet" type="text/css" href="css/camera.css">
+<!--JS-->
+<script src="js/jquery.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.mobilemenu.js"></script>
+<script src="js/jquery.equalheights.js"></script> 
+<script src="js/sForm.js"></script>
+<script src="js/jquery.ui.totop.js"></script>
+<!--[if (gt IE 9)|!(IE)]><!-->
+<script src="js/wow/wow.js"></script>
+<script src="js/wow/device.min.js"></script>
+<script>
+    $(document).ready(function () {       
+      if ($('html').hasClass('desktop')) {
+        new WOW().init();
+      }   
+    });
+</script>
+<!--<![endif]-->
+
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+
+    <div id="ie6-alert" style="width: 100%; text-align:center;">
+    <img src="http://beatie6.frontcube.com/images/ie6.jpg" alt="Upgrade IE 6" width="640" height="344" border="0" usemap="#Map" longdesc="http://die6.frontcube.com" />
+      <map name="Map" id="Map"><area shape="rect" coords="496,201,604,329" href="http://www.microsoft.com/windows/internet-explorer/default.aspx" target="_blank" alt="Download Interent Explorer" /><area shape="rect" coords="380,201,488,329" href="http://www.apple.com/safari/download/" target="_blank" alt="Download Apple Safari" /><area shape="rect" coords="268,202,376,330" href="http://www.opera.com/download/" target="_blank" alt="Download Opera" /><area shape="rect" coords="155,202,263,330" href="http://www.mozilla.com/" target="_blank" alt="Download Firefox" />
+        <area shape="rect" coords="35,201,143,329" href="http://www.google.com/chrome" target="_blank" alt="Download Google Chrome" />
+      </map>
+  </div>
+  <link rel="stylesheet" href="css/ie.css">
+  <![endif]-->
+</head>
+<body>
+<div class="main">
+    <!--header-->
+    <div class="container">
+        <header class="clearfix">
+            <nav class="navbar navbar-default navbar-static-top tm_navbar clearfix" role="navigation">
+            	<div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> 
+                  </button>
+                  <a class="navbar-brand visible-xs company-name" href="#">Suwarn Sparsh</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav sf-menu clearfix">
+                        <li class="active"><a href="index.html"><img src="img/logo_short.png" class="img-responsive" /></a></li>
+                        <li class="sub-menu"><a href="index-1.html">about</a><span class="fa fa-angle-down"></span>
+                            <ul class="submenu">
+                                <li><a href="profile.html">Company Profile</a></li>
+                                <li><a href="news.html">News & Events</a></li>
+                                <li><a href="testimonial.html">Testimonials</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="astrology.html">astrology</a></li>
+                        <li><a href="gems.html">gems collection</a></li>
+                        <li><a href="contact.html">contact us</a></li>
+                        <li class="visible-xs"><a href="#" class="login-btn">sign in | sign up</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <ul class="follow_icon text-center hidden-xs">
+				<li><a href="#" class="login-btn">sign in | sign up</a></li>
+            </ul>
+        </header>
+    </div>
+    <div class="logo_box">
+        <h1 class="navbar-brand_">Suwarn Sparsh</h1>
+        <h4>Online astrologers available for video/text chat to help you guide</h4>
+        <a class="login-btn" href="#">Connect with our astrologers</a>
+    </div>
+</div>
+<div id="PopupController" class="modal modal-open fade register-login-lg-md" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div id="signUpDiv" class="modal-content">
+            <div class="modal-header">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>New User? Sign Up:</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body container-fluid">
+                <form id="registerForm" action="/web/register" method="post">
+                    <div class="row text-center">
+                        <div class="col-md-4 text-right">
+                            <span>Username</span>
+                        </div>
+                        <div class="col-md-6 text-left">
+                            <input id="usernameReg" name="username" type="text" />
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-md-4 text-right">
+                            <span>Email</span>
+                        </div>
+                        <div class="col-md-6 text-left">
+                            <input type="text" id="emailReg" name="email" />
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-md-4 text-right">
+                            <span>Password</span>
+                        </div>
+                        <div class="col-md-6 text-left">
+                            <input type="text" name="password" id="passwordReg" />
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-md-4 text-right">
+                            <span>Repeat Password</span>
+                        </div>
+                        <div class="col-md-6 text-left">
+                            <input type="text" id="passwordRegRepeat" />
+                        </div>
+                    </div>
+                    <div class="row text-right">
+                        <div class="col-md-10">
+                            <a id="alreadyRegistered">Already registered? Please Sign In</a>
+                            <input type="submit" value="Sign Up" class="sign-in-btn" />
+                        </div>
+                    </div>
+                </form>
+                
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="dotsandlines">
+                            <div class="line"></div>
+                            <div class="circle-contain">
+                                <div class="circle"><span>Or</span></div>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <span>Sign In using&nbsp;&nbsp;</span>
+                        <button class="fb-login-btn" onclick="fbLogin();"><i class="ion-social-facebook"></i>&nbsp;|&nbsp;Facebook</button><span>&nbsp;or&nbsp;</span>
+                        <button class="google-login-btn"><i class="ion-social-google"></i>&nbsp;|&nbsp;Google</button>
+                    </div>
+                </div>
+                <br />
+            </div>
+            <div class="modal-footer">
+                <div class="row text-right">
+                    <div class="col-md-12">
+                        <a href="#" data-dismiss="modal" aria-hidden="true"><span>Close | X</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="loginDiv" class="modal-content">
+            <div class="modal-header">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Existing User? Sign in:</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body container-fluid">
+                <form id="loginForm" action="/web/login">
+                    <div class="row text-center">
+                        <div class="col-md-4 text-right">
+                            <span>Username</span>
+                        </div>
+                        <div class="col-md-6 text-left">
+                            <input type="text" name="username" id="usernameLogin"/>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-md-4 text-right">
+                            <span>Password</span>
+                        </div>
+                        <div class="col-md-6 text-left">
+                            <input type="password" name="password" id="passwordLogin"/>
+                        </div>
+                    </div>
+                    <div class="row text-center">	
+                        <div class="col-md-8 col-md-offset-2">                    	 
+                            <div id="msgbox">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row text-right">
+                        <div class="col-md-10">
+                            <a id="notRegistered">Not registered? Please Sign Up</a>
+	                            <input type="button" id="SignInBtn" value="Sign In" class="sign-in-btn" />
+                        </div>
+                    </div>
+                </form>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="dotsandlines">
+                            <div class="line"></div>
+                            <div class="circle-contain">
+                                <div class="circle"><span>Or</span></div>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <span>Sign In using&nbsp;&nbsp;</span>
+                        <button class="fb-login-btn" onclick="fbLogin();"><i class="fa fa-facebook"></i>&nbsp;|&nbsp;Facebook</button><span>&nbsp;or&nbsp;</span>
+                        <button class="google-login-btn"><i class="fa fa-google"></i>&nbsp;|&nbsp;Google</button>
+                    </div>
+                </div>
+                <br />
+            </div>
+            <div class="modal-footer">
+                <div class="row text-right">
+                    <div class="col-md-12">
+                        <a href="#" data-dismiss="modal" aria-hidden="true"><span>Close | X</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content indent"> 
+    <div class="thumb-box7">
+        <div class="container">
+            <h2 class="indent">- Testimonials -</h2>
+            <hr>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 maxheight wow fadeInUp">
+                    <div class="thumb-pad4 indent">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <p>"It was very nice to consult suwarnsparsh astrologer. He predicted that, Sep 2009 onwards, there will be good opportunities & there will be business expansion. and he also told me that i will get a chance to work with a well known company, and yes! I got a good opportunity from one of the best companies in India in mid Sep 2009 and now I am working with them. Thank you very much for your support and suggestions. I can definetly say that your prediction turned out to 100% accurate."</p>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 maxheight wow fadeInUp">
+                    <div class="thumb-pad4 indent">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <p>"I had been advised by one of my colleague to suwarnsparsh, I had meeting with suwarnsparsh's astro, I am very happy about to your predictions & accuracy which i had experienced in case of my husband. I had asked questions about my husband almost 1 year back & your predictions were very good and perfect."</p>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 maxheight wow fadeInUp">
+                    <div class="thumb-pad4 indent">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <p>"I had seen many astrologer but when i had meet with astrologer from suwarnsparsh, Whatever predicted, was pure computation and it kept on proving true, one by one."</p>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 maxheight wow fadeInUp">
+                    <div class="thumb-pad4 indent">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <p>"Your prediction that I will get the job with higher salary & post has come true. Discussions were finalized on 28th March. I have resigned from present employment on 4th Apr & will be relieved on 30 Apr. I am joining new assignment at Vapi on 15th Apr."</p>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 maxheight wow fadeInUp">
+                    <div class="thumb-pad4 indent">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <p>"I have never consulted with any astrologer but when i had meet with suwarnsparsh astrologer, they provided valuable guidance to me regarding my Job, Career, Marriage & many other things. I was in extreme dilemma regarding my job but he solved my dilemma immediately. Also provided valuable guidance regarding my illness."</p>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer-->
+<footer> 
+    <hr>
+    <div class="container">
+        <!--<figure><img src="img/foo_logo.png" alt=""></figure>-->
+        <p>&copy; Suwarn Sparsh <em id="copyright-year"></em> <span>|</span> <a href="index-5.html">Privacy Policy</a></p>
+    </div>
+</footer>
+<a href="#" id="toTop" class="fa fa-arrow-circle-up" style="display: inline;"></a>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/tm-scripts.js"></script>
+</body>
+</html>

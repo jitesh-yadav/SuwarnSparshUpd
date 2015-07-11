@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Home</title>
+<meta charset="utf-8">    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="img/logo.ico" type="image/x-icon">
+<link rel="shortcut icon" href="img/logo.ico" type="image/x-icon" />
+<meta name="description" content="Your description">
+<meta name="keywords" content="Your keywords">
+<meta name="author" content="Your name">
+<meta name = "format-detection" content = "telephone=no" />
+<!--PACE-->
+<link href="css/pace.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="js/pace.js"></script>
+<!--CSS-->
+<link rel="stylesheet" href="css/bootstrap.css" >
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="css/flaticon/flaticon.css"> 
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Questrial"> 
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900"> 
+<link rel="stylesheet" type="text/css" href="css/camera.css">
+<!--JS-->
+<script src="js/jquery.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.mobilemenu.js"></script>
+<script src="js/jquery.equalheights.js"></script> 
+<script src="js/sForm.js"></script>
+<script src="js/camera.min.js"></script>
+<!--[if (gt IE 9)|!(IE)]><!-->
+<script src="js/wow/wow.js"></script>
+<script src="js/wow/device.min.js"></script>
+<script>
+    $(document).ready(function () {       
+      if ($('html').hasClass('desktop')) {
+        new WOW().init();
+      }   
+    });
+</script>
+<!--<![endif]-->
+
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+
+    <div id="ie6-alert" style="width: 100%; text-align:center;">
+    <img src="http://beatie6.frontcube.com/images/ie6.jpg" alt="Upgrade IE 6" width="640" height="344" border="0" usemap="#Map" longdesc="http://die6.frontcube.com" />
+      <map name="Map" id="Map"><area shape="rect" coords="496,201,604,329" href="http://www.microsoft.com/windows/internet-explorer/default.aspx" target="_blank" alt="Download Interent Explorer" /><area shape="rect" coords="380,201,488,329" href="http://www.apple.com/safari/download/" target="_blank" alt="Download Apple Safari" /><area shape="rect" coords="268,202,376,330" href="http://www.opera.com/download/" target="_blank" alt="Download Opera" /><area shape="rect" coords="155,202,263,330" href="http://www.mozilla.com/" target="_blank" alt="Download Firefox" />
+        <area shape="rect" coords="35,201,143,329" href="http://www.google.com/chrome" target="_blank" alt="Download Google Chrome" />
+      </map>
+  </div>
+  <link rel="stylesheet" href="css/ie.css">
+  <![endif]-->
+</head>
+<body>
+<div class="content">
+<div class="main">
+    <!--header-->
+    <div class="container">
+        <header class="clearfix">
+            <nav class="navbar navbar-default navbar-static-top tm_navbar clearfix" role="navigation">
+            	<div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> 
+                  </button>
+                  <a class="navbar-brand company-name visible-xs" href="#"><img src="img/logo.png" class="img-responsive" /><!--Suwarn Sparsh--></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav sf-menu clearfix">
+                        <li class="active"><a href="index.html"><img src="img/logo_short.png" class="img-responsive" /></a></li>
+                        <li class="sub-menu"><a href="#">about</a><span class="fa fa-angle-down"></span>
+                            <ul class="submenu">
+                                <li><a href="profile.html">Company Profile</a></li>
+                                <li><a href="news.html">News & Events</a></li>
+                                <li><a href="testimonial.html">Testimonials</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="astrology.html">astrology</a></li>
+                        <li><a href="gems.html">gems collection</a></li>
+                        <li><a href="contact.html">contact us</a></li>
+                        <li class="visible-xs"><a href="#" class="login-btn">sign in | sign up</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <ul class="follow_icon text-center hidden-xs">
+				<li><a href="#" class="login-btn">sign in | sign up</a></li>
+            </ul>
+        </header>
+    </div>
+    <div id="PopupController" class="modal modal-open fade register-login-lg-md" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div id="signUpDiv" class="modal-content">
+                <div class="modal-header">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>New User? Sign Up:</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body container-fluid">
+                	<form id="registerForm" action="/web/register" method="post">
+	                    <div class="row text-center">
+	                        <div class="col-md-4 text-right">
+	                            <span>Username</span>
+	                        </div>
+	                        <div class="col-md-6 text-left">
+	                            <input id="usernameReg" name="username" type="text" />
+	                        </div>
+	                    </div>
+	                    <div class="row text-center">
+	                        <div class="col-md-4 text-right">
+	                            <span>Email</span>
+	                        </div>
+	                        <div class="col-md-6 text-left">
+	                            <input type="text" id="emailReg" name="email" />
+	                        </div>
+	                    </div>
+	                    <div class="row text-center">
+	                        <div class="col-md-4 text-right">
+	                            <span>Password</span>
+	                        </div>
+	                        <div class="col-md-6 text-left">
+	                            <input type="text" name="password" id="passwordReg" />
+	                        </div>
+	                    </div>
+	                    <div class="row text-center">
+	                        <div class="col-md-4 text-right">
+	                            <span>Repeat Password</span>
+	                        </div>
+	                        <div class="col-md-6 text-left">
+	                            <input type="text" id="passwordRegRepeat" />
+	                        </div>
+	                    </div>
+	                    <div class="row text-right">
+	                        <div class="col-md-10">
+	                            <a id="alreadyRegistered">Already registered? Please Sign In</a>
+	                            <input type="submit" value="Sign Up" class="sign-in-btn" />
+	                        </div>
+	                    </div>
+	                </form>
+                    
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="dotsandlines">
+                                <div class="line"></div>
+                                <div class="circle-contain">
+                                    <div class="circle"><span>Or</span></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-md-12">
+                            <span>Sign In using&nbsp;&nbsp;</span>
+                            <button class="fb-login-btn" onclick="fbLogin();"><i class="ion-social-facebook"></i>&nbsp;|&nbsp;Facebook</button><span>&nbsp;or&nbsp;</span>
+                            <button class="google-login-btn"><i class="ion-social-google"></i>&nbsp;|&nbsp;Google</button>
+                        </div>
+                    </div>
+                    <br />
+                </div>
+                <div class="modal-footer">
+                    <div class="row text-right">
+                        <div class="col-md-12">
+                            <a href="#" data-dismiss="modal" aria-hidden="true"><span>Close | X</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="loginDiv" class="modal-content">
+                <div class="modal-header">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>Existing User? Sign in:</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body container-fluid">
+                    <form id="loginForm" action="/web/login">
+	                    <div class="row text-center">
+	                        <div class="col-md-4 text-right">
+	                            <span>Username</span>
+	                        </div>
+	                        <div class="col-md-6 text-left">
+	                            <input type="text" name="username" id="usernameLogin"/>
+	                        </div>
+	                    </div>
+	                    <div class="row text-center">
+	                        <div class="col-md-4 text-right">
+	                            <span>Password</span>
+	                        </div>
+	                        <div class="col-md-6 text-left">
+	                            <input type="password" name="password" id="passwordLogin"/>
+	                        </div>
+	                    </div>
+	                    <div class="row text-center">	
+	                    	<div class="col-md-8 col-md-offset-2">                    	 
+								<div id="msgbox">
+								</div>
+							</div>
+	                    </div>
+	                    <div class="row text-right">
+	                        <div class="col-md-10">
+	                            <a id="notRegistered">Not registered? Please Sign Up</a>
+	                            <input type="button" id="SignInBtn" value="Sign In" class="sign-in-btn" />
+	                        </div>
+	                    </div>
+	                </form>
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="dotsandlines">
+                                <div class="line"></div>
+                                <div class="circle-contain">
+                                    <div class="circle"><span>Or</span></div>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-md-12">
+                            <span>Sign In using&nbsp;&nbsp;</span>
+                            <button class="fb-login-btn" onclick="fbLogin();"><i class="fa fa-facebook"></i>&nbsp;|&nbsp;Facebook</button><span>&nbsp;or&nbsp;</span>
+                            <button class="google-login-btn"><i class="fa fa-google"></i>&nbsp;|&nbsp;Google</button>
+                        </div>
+                    </div>
+                    <br />
+                </div>
+                <div class="modal-footer">
+                    <div class="row text-right">
+                        <div class="col-md-12">
+                            <a href="#" data-dismiss="modal" aria-hidden="true"><span>Close | X</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="showcase" class="hidden-xs">
+        <div class="moduletable ">
+            <div class="module_container">
+                <div id="camera-slideshow_92" class=" camera_wrap pattern_1">
+                    <div class="camera-item" data-src="img/slider/slide-1.jpg" data-thumb="">
+                        <div class="camera_caption fadeIn">
+                            <p><strong>Believe</strong> in things that can fortunately change your life</p>
+                            <!--<a class="page-scroll btn2" href="#astrologers">Connect with our astrologers</a>
+            				<a class="btn1 login-btn" href="#">Login/Sign Up</a> -->
+                        </div>
+                    </div>
+                    <div class="camera-item" data-src="img/slider/slide-4.jpg" data-thumb="">
+                        <div class="camera_caption fadeIn">
+                            <p><strong>Video Chat</strong> with our astrologers now to get guided.</p>
+                            <!--<a class="page-scroll btn2" href="#astrologers">Connect with our astrologers</a>
+            				<a class="btn1 login-btn" href="#">Login/Sign Up</a> -->
+                        </div>
+                    </div>
+                    <div class="camera-item" data-src="img/slider/slide-2.jpg" data-thumb="">
+                        <div class="camera_caption fadeIn">
+                            <p><strong>Find</strong> your ideal spouse with the help of horoscope</p> 
+                            <!--<a class="page-scroll btn2" href="#astrologers">Connect with our astrologers</a>
+            				<a class="btn1 login-btn" href="#">Login/Sign Up</a> -->
+                        </div>
+                    </div>
+                    <div class="camera-item" data-src="img/slider/slide-3.jpg" data-thumb="">
+                        <div class="camera_caption fadeIn">
+                            <p><strong>Let</strong> the stars help you to discover your fate</p> 
+                            <!--<a class="page-scroll btn2" href="#astrologers">Connect with our astrologers</a>
+            				<a class="btn1 login-btn" href="#">Login/Sign Up</a> -->
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    jQuery(function(){
+                        jQuery('#camera-slideshow_92').camera({
+                            alignment				: "topCenter", //topLeft, topCenter, topRight, centerLeft, center, centerRight, bottomLeft, bottomCenter, bottomRight
+                            autoAdvance				: true,	//true, false
+                            mobileAutoAdvance		: true, //true, false. Auto-advancing for mobile devices
+                            barDirection			: "leftToRight",	//'leftToRight', 'rightToLeft', 'topToBottom', 'bottomToTop'
+                            barPosition				: "bottom",	//'bottom', 'left', 'top', 'right'
+                            cols					: 6,
+                            easing					: "swing",	//for the complete list http://jqueryui.com/demos/effect/easing.html
+                            mobileEasing			: "swing",	//leave empty if you want to display the same easing on mobile devices and on desktop etc.
+                            fx						: "simpleFade",	
+                            mobileFx				: "simpleFade",		//leave empty if you want to display the same effect on mobile devices and on desktop etc.
+                            gridDifference			: 250,	//to make the grid blocks slower than the slices, this value must be smaller than transPeriod
+                            height					: "500px",	//here you can type pixels (for instance '300px'), a percentage (relative to the width of the slideshow, for instance '50%') or 'auto'
+                            imagePath				: '../img/',	//the path to the image folder (it serves for the blank.gif, when you want to display videos)
+                            hover					: false,	//true, false. Puase on state hover. Not available for mobile devices
+                            loader					: "none",	//pie, bar, none (even if you choose "pie", old browsers like IE8- can't display it... they will display always a loading bar)
+                            loaderColor				: "#eeeeee", 
+                            loaderBgColor			: "#222222", 
+                            loaderOpacity			: .8,	//0, .1, .2, .3, .4, .5, .6, .7, .8, .9, 1
+                            loaderPadding			: 2,	//how many empty pixels you want to display between the loader and its background
+                            loaderStroke			: 7,	//the thickness both of the pie loader and of the bar loader. Remember: for the pie, the loader thickness must be less than a half of the pie diameter
+                            minHeight				: "500px",	//you can also leave it blank
+                            navigation				: false,	//true or false, to display or not the navigation buttons
+                            navigationHover			: false,	//if true the navigation button (prev, next and play/stop buttons) will be visible on hover state only, if false they will be 	visible always
+                            mobileNavHover			: false,	//same as above, but only for mobile devices
+                            opacityOnGrid			: false,	//true, false. Decide to apply a fade effect to blocks and slices: if your slideshow is fullscreen or simply big, I recommend to set it false to have a smoother effect 
+                            overlayer				: false,	//a layer on the images to prevent the users grab them simply by clicking the right button of their mouse (.camera_overlayer)
+                            pagination				: false,
+                            playPause				: false,	//true or false, to display or not the play/pause buttons
+                            pauseOnClick			: false,	//true, false. It stops the slideshow when you click the sliders.
+                            pieDiameter				: 38,
+                            piePosition				: "rightTop",	//'rightTop', 'leftTop', 'leftBottom', 'rightBottom'
+                            portrait				: false, //true, false. Select true if you don't want that your images are cropped
+                            rows					: 4,
+                            slicedCols				: 6,	//if 0 the same value of cols
+                            slicedRows				: 4,	//if 0 the same value of rows
+                            // slideOn				: "",	//next, prev, random: decide if the transition effect will be applied to the current (prev) or the next slide
+                            thumbnails				: false,
+                            time					: 7000,	//milliseconds between the end of the sliding effect and the start of the nex one
+                            transPeriod				: 1500	//lenght of the sliding effect in milliseconds
+                            // onEndTransition		: function() {  },	//this callback is invoked when the transition effect ends
+                            // onLoaded				: function() {  },	//this callback is invoked when the image on a slide has completely loaded
+                            // onStartLoading		: function() {  },	//this callback is invoked when the image on a slide start loading
+                            // onStartTransition	: function() {  }	//this callback is invoked when the transition effect starts
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+    <!--<div class="logo_box">
+        <h1 class="navbar-brand_">Suwarn Sparsh</h1>
+        <h4>Online astrologers available for video/text chat to help you guide.</h4>
+    </div>-->
+</div>
+<div class="content"> 
+    <div class="thumb-box1">
+        <div class="container">          
+            <h2>Let our astrologers help you to discover your fate</h2>
+            <ul class="list1">
+                <li><a class="page-scroll" href="#astrologers">Horoscopes</a></li>
+                <li><a class="page-scroll" href="#astrologers">psychics</a></li>
+                <li><a class="page-scroll" href="#astrologers">tarot</a></li>
+                <li><a class="page-scroll" href="#astrologers">gems & Stones</a></li>
+                <li><a class="page-scroll" href="#astrologers">oracles</a></li>
+                <li><a class="page-scroll" href="#astrologers">numerology</a></li>
+                <li><a class="page-scroll" href="#astrologers">forecasts</a></li>
+            </ul>
+            <!--<strong>Today`s horoscope:</strong>
+            <div class="row">
+                <div class="col-lg-5 col-md-6 col-sm-6 col-lg-offset-1">
+                    <p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus a lorem.</p>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-6">
+                    <p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus a lorem.</p>
+                </div>
+            </div> -->
+            <a class="btn-default btn1 page-scroll" href="#zodiac">all about your sign</a>
+            <a class="btn-default btn2 page-scroll" href="#astrologers">connect with our astrologers</a>
+        </div>
+    </div>
+</div>
+<div id="zodiac" class="zodiac_box">    
+    <div class="container glyph">
+        <!--<div class="row">
+            <div class="col-lg-6 col-md-8 col-sm-10 col-lg-offset-3 col-md-offset-2 col-sm-offset-1">
+                <time datetime="2014-01-01">Nov. 22, 2014</time>
+            </div>
+        </div>-->
+        <div class="box box1 wow fadeInUp" data-wow-delay="0.3s">
+            <div><p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus a lorem.</p><a href="#" class="btn-default btn5">read more</a></div>
+            <figure><span class="glyph-icon flaticon-aries2"></span></figure>
+            <strong>aries</strong>
+        </div>
+        <div class="box box2 wow fadeInUp" data-wow-delay="0.2s">
+            <div><p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus a lorem.</p><a href="#" class="btn-default btn5">read more</a></div>
+            <figure><span class="glyph-icon flaticon-taurus5"></span></figure>
+            <strong>taurus</strong>
+        </div>
+        <div class="box box3 wow fadeInUp" data-wow-delay="0.1s">
+            <div><p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus a lorem.</p><a href="#" class="btn-default btn5">read more</a></div>
+            <figure><span class="glyph-icon flaticon-gemini3"></span></figure>
+            <strong>gemini</strong>
+        </div>
+        <div class="box box4 wow fadeInUp">
+            <div><p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus a lorem.</p><a href="#" class="btn-default btn5">read more</a></div>
+            <figure><span class="glyph-icon flaticon-cancer4"></span></figure>
+            <strong>cancer</strong>
+        </div>
+        
+        <div class="box box5 wow fadeInUp" data-wow-delay="0.3s">
+            <div><p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus a lorem.</p><a href="#" class="btn-default btn5">read more</a></div>
+            <figure><span class="glyph-icon flaticon-leo3"></span></figure>
+            <strong>leo</strong>
+        </div>
+        <div class="box box6 wow fadeInUp" data-wow-delay="0.2s">
+            <div><p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus a lorem.</p><a href="#" class="btn-default btn5">read more</a></div>
+            <figure><span class="glyph-icon flaticon-virgo6"></span></figure>
+            <strong>virgo</strong>
+        </div>
+        <div class="box box7 wow fadeInUp" data-wow-delay="0.1s">
+            <div><p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus a lorem.</p><a href="#" class="btn-default btn5">read more</a></div>
+            <figure><span class="glyph-icon flaticon-libra10"></span></figure>
+            <strong>libra</strong>
+        </div>
+        <div class="box box8 wow fadeInUp">
+            <div><p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus a lorem.</p><a href="#" class="btn-default btn5">read more</a></div>
+            <figure><span class="glyph-icon flaticon-scorpion2"></span></figure>
+            <strong>scorpio</strong>
+        </div>
+        
+        <div class="box box9 wow fadeInUp" data-wow-delay="0.3s">
+            <div><p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus a lorem.</p><a href="#" class="btn-default btn5">read more</a></div>
+            <figure><span class="glyph-icon flaticon-sagittarius8"></span></figure>
+            <strong>sagittarius</strong>
+        </div>
+        <div class="box box10 wow fadeInUp" data-wow-delay="0.2s">
+            <div><p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus a lorem.</p><a href="#" class="btn-default btn5">read more</a></div>
+            <figure><span class="glyph-icon flaticon-capricorn5"></span></figure>
+            <strong>capricorn</strong>
+        </div>
+        <div class="box box11 wow fadeInUp" data-wow-delay="0.1s">
+            <div><p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus a lorem.</p><a href="#" class="btn-default btn5">read more</a></div>
+            <figure><span class="glyph-icon flaticon-aquarius2"></span></figure>
+            <strong>aquarius</strong>
+        </div>
+        <div class="box box12 wow fadeInUp">
+            <div><p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus a lorem.</p><a href="#" class="btn-default btn5">read more</a></div>
+            <figure><span class="glyph-icon flaticon-pisces7"></span></figure>
+            <strong>pisces</strong>
+        </div>
+    </div>
+</div>
+<!--content-->
+<div id="astrologers" class="content"> 
+    <!--<div class="thumb-box1">
+        <div class="container">          
+            <h2>Let the stars help you to discover your fate</h2>
+            <ul class="list1">
+                <li><a href="#">Horoscopes</a></li>
+                <li><a href="#">psychics</a></li>
+                <li><a href="#">tarot</a></li>
+                <li><a href="#">oracles</a></li>
+                <li><a href="#">numerology</a></li>
+                <li><a href="#">forecasts</a></li>
+                <li><a href="#">faraway fortunes</a></li>
+            </ul>
+            <strong>Today`s horoscope:</strong>
+            <div class="row">
+                <div class="col-lg-5 col-md-6 col-sm-6 col-lg-offset-1">
+                    <p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus a lorem.</p>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-6">
+                    <p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus a lorem.</p>
+                </div>
+            </div>
+            <a href="#" class="btn-default btn1">all about your sign</a>
+            <a href="#" class="btn-default btn2">chinese portrait</a>
+        </div>
+    </div>-->
+    <div class="thumb-box2">
+        <div class="container"> 
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <strong>Astrology Experts</strong>
+                    <div class="thumb-pad1">
+                        <div class="thumbnail">
+                            <figure><img src="img/page1_pic1.jpg" alt=""></figure>
+                            <div class="caption">
+                                <p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. </p>
+                                <a href="#" class="btn-default btn3">talk now</a>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <strong>Gems/Stones Experts</strong>
+                    <div class="thumb-pad1">
+                        <div class="thumbnail">
+                            <figure><img src="img/page1_pic2.jpg" alt=""></figure>
+                            <div class="caption">
+                                <p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. </p>
+                                <a href="#" class="btn-default btn3">talk now</a>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <strong>Tarot Experts</strong>
+                    <div class="thumb-pad1">
+                        <div class="thumbnail">
+                            <figure><img src="img/page1_pic3.jpg" alt=""></figure>
+                            <div class="caption">
+                                <p>Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. </p>
+                                <a href="#" class="btn-default btn3">talk now</a>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="thumb-box3">
+        <div class="container"> 
+            <div class="box">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <strong>sign up for free</strong>
+                    </div>
+                    <div class="col-lg-4">
+                        <p>get your daily horoscope, daily lovescope and daily tarot by email</p>
+                    </div>
+                    <div class="col-lg-5">
+                        <form id="newsletter" accept-charset="utf-8">
+                			<div class="success">Your subscribe request has been sent!</div>
+                            <label class="email">
+                		    	<input type="email" value="Enter your email here">
+                		    	<span class="error">*This is not a valid email address.</span>
+                		    </label>
+                            <a href="#" data-type="submit">subscribe</a>
+                		</form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="thumb-box4">
+        <div class="container"> 
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <strong>Horoscopes</strong>
+                    <ul class="list2">
+                        <li><a href="#">2015 Horoscope</a></li>
+                        <li><a href="#">2014 Chinese Horoscope</a></li>
+                        <li><a href="#">Daily Horoscope</a></li>
+                        <li><a href="#">Weekly Horoscope</a></li>
+                        <li><a href="#">Monthly Horoscope</a></li>
+                        <li><a href="#">Daily Love Horoscope</a></li>
+                        <li><a href="#">Career Horoscope</a></li>
+                        <li><a href="#">Weekly Money Horoscope</a></li>
+                        <li><a href="#">Wellness Horoscope</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <strong>Tarot readings</strong>
+                    <ul class="list2">
+                        <li><a href="#">Daily Tarot Reading</a></li>
+                        <li><a href="#">Weekly Tarot Reading</a></li>
+                        <li><a href="#">Monthly Tarot Reading</a></li>
+                        <li><a href="#">Today/Tomorrow Tarot</a></li>
+                        <li><a href="#">Daily Love Tarot</a></li>
+                        <li><a href="#">Lover's Triangle Reading</a></li>
+                        <li><a href="#">Dream Tarot Interpretation</a></li>
+                        <li><a href="#">Inner Animal Tarot</a></li>
+                        <li><a href="#">Friend Or Foe Tarot</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <strong>Fun & alternative</strong>
+                    <ul class="list2">
+                        <li><a href="#">Celebrity Birthday</a></li>
+                        <li><a href="#">Celebrity Love Match</a></li>
+                        <li><a href="#">Dream Dictionary</a></li>
+                        <li><a href="#">Pet Compatibility</a></li>
+                        <li><a href="#">Magic Love Ball</a></li>
+                        <li><a href="#">Psychic Test</a></li>
+                        <li><a href="#">Shell Oracle</a></li>
+                        <li><a href="#">Daily Love Oracle</a></li>
+                        <li><a href="#">Rate Your Date</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <strong>more about astrology</strong>
+                    <ul class="list2">
+                        <li><a href="#">Premium Charts and Reports</a></li>
+                        <li><a href="#">12 Zodiac Sign Profiles</a></li>
+                        <li><a href="#">12 Chinese Signs</a></li>
+                        <li><a href="#">Chinese Calendar</a></li>
+                        <li><a href="#">Mayan Astrology</a></li>
+                        <li><a href="#">AstroProfile by e-mail</a></li>
+                        <li><a href="#">Horoscope & Astrology Articles</a></li>
+                        <li><a href="#">Psychic Articles</a></li>
+                        <li><a href="#">Astrology Facts</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer-->
+<footer> 
+    <hr>
+    <div class="container">
+        <!--<figure><img src="img/foo_logo.png" alt=""></figure>-->
+        <p>&copy; Suwarn Sparsh <em id="copyright-year"></em> <span>|</span> <a href="index-5.html">Privacy Policy</a></p>
+    </div>
+</footer>
+<a href="#" id="toTop" class="fa fa-arrow-circle-up" style="display: inline;"></a>
+</div>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/tm-scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>News & Events</title>
+<meta charset="utf-8">    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="img/logo.ico" type="image/x-icon">
+<link rel="shortcut icon" href="img/logo.ico" type="image/x-icon" />
+<meta name="description" content="Your description">
+<meta name="keywords" content="Your keywords">
+<meta name="author" content="Your name">
+<meta name = "format-detection" content = "telephone=no" />
+<!--CSS-->
+<link rel="stylesheet" href="css/bootstrap.css" >
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="css/flaticon/flaticon.css"> 
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Questrial"> 
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900"> 
+<link rel="stylesheet" type="text/css" href="css/camera.css">
+<!--JS-->
+<script src="js/jquery.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.mobilemenu.js"></script>
+<script src="js/jquery.equalheights.js"></script> 
+<script src="js/sForm.js"></script>
+<script src="js/jquery.ui.totop.js"></script>
+<!--[if (gt IE 9)|!(IE)]><!-->
+<script src="js/wow/wow.js"></script>
+<script src="js/wow/device.min.js"></script>
+<script>
+    $(document).ready(function () {       
+      if ($('html').hasClass('desktop')) {
+        new WOW().init();
+      }   
+    });
+</script>
+<!--<![endif]-->
+
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+
+    <div id="ie6-alert" style="width: 100%; text-align:center;">
+    <img src="http://beatie6.frontcube.com/images/ie6.jpg" alt="Upgrade IE 6" width="640" height="344" border="0" usemap="#Map" longdesc="http://die6.frontcube.com" />
+      <map name="Map" id="Map"><area shape="rect" coords="496,201,604,329" href="http://www.microsoft.com/windows/internet-explorer/default.aspx" target="_blank" alt="Download Interent Explorer" /><area shape="rect" coords="380,201,488,329" href="http://www.apple.com/safari/download/" target="_blank" alt="Download Apple Safari" /><area shape="rect" coords="268,202,376,330" href="http://www.opera.com/download/" target="_blank" alt="Download Opera" /><area shape="rect" coords="155,202,263,330" href="http://www.mozilla.com/" target="_blank" alt="Download Firefox" />
+        <area shape="rect" coords="35,201,143,329" href="http://www.google.com/chrome" target="_blank" alt="Download Google Chrome" />
+      </map>
+  </div>
+  <link rel="stylesheet" href="css/ie.css">
+  <![endif]-->
+</head>
+<body>
+<div class="main">
+    <!--header-->
+    <div class="container">
+        <header class="clearfix">
+            <nav class="navbar navbar-default navbar-static-top tm_navbar clearfix" role="navigation">
+            	<div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> 
+                  </button>
+                  <a class="navbar-brand visible-xs company-name" href="#">Suwarn Sparsh</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav sf-menu clearfix">
+                        <li class="active"><a href="index.html"><img src="img/logo_short.png" class="img-responsive" /></a></li>
+                        <li class="sub-menu"><a href="#">about</a><span class="fa fa-angle-down"></span>
+                            <ul class="submenu">
+                                <li><a href="profile.html">Company Profile</a></li>
+                                <li><a href="news.html">News & Events</a></li>
+                                <li><a href="testimonial.html">Testimonials</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="astrology.html">astrology</a></li>
+                        <li><a href="gems.html">gems collection</a></li>
+                        <li><a href="contact.html">contact us</a></li>
+                        <li class="visible-xs"><a href="#" class="login-btn">sign in | sign up</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <ul class="follow_icon text-center hidden-xs">
+				<li><a href="#" class="login-btn">sign in | sign up</a></li>
+            </ul>
+        </header>
+    </div>
+    <div class="logo_box">
+        <h1 class="navbar-brand_">Suwarn Sparsh</h1>
+        <h4>Online astrologers available for video/text chat to help you guide</h4>
+        <a class="login-btn" href="#">Connect with our astrologers</a>
+    </div>
+</div>
+<div id="PopupController" class="modal modal-open fade register-login-lg-md" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div id="signUpDiv" class="modal-content">
+            <div class="modal-header">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>New User? Sign Up:</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body container-fluid">
+                <form id="registerForm" action="/web/register" method="post">
+                    <div class="row text-center">
+                        <div class="col-md-4 text-right">
+                            <span>Username</span>
+                        </div>
+                        <div class="col-md-6 text-left">
+                            <input id="usernameReg" name="username" type="text" />
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-md-4 text-right">
+                            <span>Email</span>
+                        </div>
+                        <div class="col-md-6 text-left">
+                            <input type="text" id="emailReg" name="email" />
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-md-4 text-right">
+                            <span>Password</span>
+                        </div>
+                        <div class="col-md-6 text-left">
+                            <input type="text" name="password" id="passwordReg" />
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-md-4 text-right">
+                            <span>Repeat Password</span>
+                        </div>
+                        <div class="col-md-6 text-left">
+                            <input type="text" id="passwordRegRepeat" />
+                        </div>
+                    </div>
+                    <div class="row text-right">
+                        <div class="col-md-10">
+                            <a id="alreadyRegistered">Already registered? Please Sign In</a>
+                            <input type="submit" value="Sign Up" class="sign-in-btn" />
+                        </div>
+                    </div>
+                </form>
+                
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="dotsandlines">
+                            <div class="line"></div>
+                            <div class="circle-contain">
+                                <div class="circle"><span>Or</span></div>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <span>Sign In using&nbsp;&nbsp;</span>
+                        <button class="fb-login-btn" onclick="fbLogin();"><i class="ion-social-facebook"></i>&nbsp;|&nbsp;Facebook</button><span>&nbsp;or&nbsp;</span>
+                        <button class="google-login-btn"><i class="ion-social-google"></i>&nbsp;|&nbsp;Google</button>
+                    </div>
+                </div>
+                <br />
+            </div>
+            <div class="modal-footer">
+                <div class="row text-right">
+                    <div class="col-md-12">
+                        <a href="#" data-dismiss="modal" aria-hidden="true"><span>Close | X</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="loginDiv" class="modal-content">
+            <div class="modal-header">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Existing User? Sign in:</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body container-fluid">
+                <form id="loginForm" action="/web/login">
+                    <div class="row text-center">
+                        <div class="col-md-4 text-right">
+                            <span>Username</span>
+                        </div>
+                        <div class="col-md-6 text-left">
+                            <input type="text" name="username" id="usernameLogin"/>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-md-4 text-right">
+                            <span>Password</span>
+                        </div>
+                        <div class="col-md-6 text-left">
+                            <input type="password" name="password" id="passwordLogin"/>
+                        </div>
+                    </div>
+                    <div class="row text-center">	
+                        <div class="col-md-8 col-md-offset-2">                    	 
+                            <div id="msgbox">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row text-right">
+                        <div class="col-md-10">
+                            <a id="notRegistered">Not registered? Please Sign Up</a>
+	                            <input type="button" id="SignInBtn" value="Sign In" class="sign-in-btn" />
+                        </div>
+                    </div>
+                </form>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="dotsandlines">
+                            <div class="line"></div>
+                            <div class="circle-contain">
+                                <div class="circle"><span>Or</span></div>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <span>Sign In using&nbsp;&nbsp;</span>
+                        <button class="fb-login-btn" onclick="fbLogin();"><i class="fa fa-facebook"></i>&nbsp;|&nbsp;Facebook</button><span>&nbsp;or&nbsp;</span>
+                        <button class="google-login-btn"><i class="fa fa-google"></i>&nbsp;|&nbsp;Google</button>
+                    </div>
+                </div>
+                <br />
+            </div>
+            <div class="modal-footer">
+                <div class="row text-right">
+                    <div class="col-md-12">
+                        <a href="#" data-dismiss="modal" aria-hidden="true"><span>Close | X</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content indent"> 
+    <div class="thumb-box7">
+        <div class="container">
+            <h2 class="indent">- In News | Dainik Bhaskar -</h2>
+            <hr>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 fadeInUp">
+                    <div class="thumb-pad4 indent">
+                        <div class="thumbnail">
+                            <div class="caption">
+                            	<h4>7वीं तक पढ़े, 4000 रुपए की नौकरी की, आज 50 करोड़ की कंपनी के मालिक</h4>
+                                <p>
+मुंबई। हुनर हो, आगे बढऩे का जुनून हो तो अधूरी पढ़ाई भी कॅरिअर में बाधा नहीं बनती है। विमल बताते हैं- 'घर के हालात ठीक नहीं थे। स्कूली पढ़ाई मुश्किल थी। 7वीं तक आते-आते स्कूल छूट गया। पिता हीरे तराशने का काम करते थे। मैंने भी उनसे यह काम सीख लिया। जब 20 साल का था, एक दिन पड़ोसी से झगड़ा हो गया। पिता मुझसे इतने खफा हुए कि उन्होंने मुझे घर से निकाल दिया। कह दिया, कहीं और जाकर काम ढूंढ़ लो। मार्च 1996 में मुंबई चला गया।'
+
+मुंबई में 4000 रुपए महीने की तनख्वाह पर एक फैक्टरी में उन्हें हीरे तराशने का काम मिला। दो साल काम किया। तनख्वाह 75 फीसदी तक बढ़ गई थी, लेकिन जानते थे कि कभी आगे नहीं बढ़ पाएंगे। नवंबर 1997 में उन दोस्तों के साथ जुड़े जो रफ डायमंड्स और जेमस्टोन की ब्रोकिंग करते थे। श्रीलंका और थाईलैंड के कारोबारी और लोकल ट्रेडर्स और ज्वेलर्स के बीच ब्रोङ्क्षकग करनी होती थी। उन्हें हर दिन 1 हजार से 2 हजार रु. कमिशन मिलने लगा।
+
+विमल पटेल : सीएमडी और संस्थापक सुवर्णस्पर्श जेम्स एंड ज्वेलरी
+
+जन्म : 1976, आणंद में
+
+शिक्षा : सातवीं तक पढ़े।
+
+पिता : हीरे तराशने का काम करते थे।
+
+क्यों चर्चा में:  उनकी कंपनी प्राइवेट इक्विटी के जरिए 40 करोड़ रु. जुटाएगी। पूरे देश में करेगी कामकाज का विस्तार।</p>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="indent">- In News | Divya Bhaskar -</h2>
+            <hr>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 fadeInUp">
+                    <div class="thumb-pad4 indent">
+                        <div class="thumbnail">
+                            <div class="caption">
+                            	<h4>સાત ચોપડી ભણેલો ગુજરાતી 50 કરોડની કંપનીનો માલિક</h4>
+                                <p>
+કહેવાય છે ને કે ગુજરાતીના લોહીમાં બિઝનેસ દોડે છે. આ કહેવત આ ગુજરાતીને એકદમ બંધ બેસે છે. જ્યારે કોઇ વ્યક્તિએ જીવનમાં આગળ વધવાનું મન બનાવી લીધું જ હોય તો તેને કોઇ રોકી શકતું નથી, પછી ભલેને અધવચ્ચે અભ્યાસ પડતો મૂક્યો હોય તો પણ તે તેની કેરિયરમાં કયાંય વિઘ્ન નાંખતું નથી. આવી જ વાત છે ગુજરાતના આણંદ જિલ્લાના છોકરાની.
+
+વિમલ પટેલ : CMD અને સંસ્થાપક, સુવર્ણસ્પર્શ જેમ્સ એન્ડ જ્વેલરી
+જન્મ : 1976, આણંદમાં
+અભ્યાસ : સાતમાં ધોરણ સુધી
+પિતા : હીરા ઘસવાનું કામ કરતા હતા
+કેમ ચર્ચામાં : તેમની કંપની પ્રાઇવેટ ઇક્વિટી દ્વારા 40 કરોડ રૂપિયા એકત્ર કરશે. આખા દેશમાં કામકાજનું વિસ્તરણ કરશે
+
+આગળની સ્લાઇડમાં ક્લિક કરીને જાણો ગુજરાતી છોકરાને ઘરમાંથી કાઢી મૂકતા કઇ રીતે આગળ વધ્યો</p>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="indent">- In News | Economic Times -</h2>
+            <hr>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 fadeInUp">
+                    <div class="thumb-pad4 indent">
+                        <div class="thumbnail">
+                            <div class="caption">
+                            	<h4>From a salary of Rs 4,000, Vimal Patel now heads a Rs 50-cr retail chain</h4>
+                                <p>Dropping out of school in Class 7, and getting thrown out of the family home in Anand, Gujarat, for rowdy behaviour does not bode well for a career of any kind. Yet, today, I am the founder, chairman and managing      director of the Rs 50 crore Suwarnsparsh Group.
+
+ After leaving school, I spent time loitering around with friends, but along the way, I managed to learn the gemstone  polishing trade from my father, who was into polishing of rough diamonds. Then, one day, as a 20-year-old, an  argument with a neighbour got out of hand and I roughed him up seriously. My father was so upset that he told me to leave the house and take up employment in another city. This is how I found myself living with my cousin in Mumbai in March 1996.
+.
+
+
+Capitalising on the only trade knowledge I boasted, I took up a job polishing diamonds at a factory at Chira Bazaar in south Mumbai for a monthly salary of Rs 4,000. During the nearly two years in this job, my salary saw a 75 per cent increment, but I knew that I would never grow as a person there.
+
+In November 1997, I decided to join some friends who dabbled in broking rough diamonds and gemstones for a commission. For the first few months, I accompanied a friend to learn the basics of the trade. The modus operandi was simple. Brokers mediated between traders, who came from places like Sri Lanka and Thailand with different kinds of rough diamonds, and the local wholesaler traders and retail jewellers. In the bargain, the broker could not only keep a cut from the agreed upon price, but also get a brokerage for his efforts.
+
+I became involved with this business on a full-time basis in March 1998. I would travel to the suburbs of Mumbai to create a wider network of local players instead of limiting myself to south Mumbai. I ended up making Rs 1,000-2,000 per day by way of commissions. By 1999, I had managed to save around Rs 50,000, which served as the seed capital for my own trading company, Vimal Gems.
+
+Still operating out of my cousin's house, I started buying rough gemstones directly from foreign traders at an additional discount — since I would pay in cash — and then sold them to local players at a higher price. I also roped in a few of my cousins from Gujarat. By the end of 2000, Vimal Gems employed around eight people and clocked a turnover of Rs 15 lakh.
+
+  I faced my first business setback in April 2001, when one of my employees ran off with nearly Rs 29 lakh belonging to a trader. I had to sell all my investments to repay the trader. Since I was completely broke, I once again started broking gemstones for a commission. Five years on, I managed to save enough to restart the business. This time around, I leased a small place at Zaveri Bazaar to take care of administrative activities. I also started travelling to Sri Lanka and Thailand to buy the rough gemstones directly from the mines. So I managed to get better quality gemstones at a much cheaper rate, which I then sold to local Mumbai-based jewellers and wholesalers.
+
+Things were looking up when recession hit in 2008. As most of our business was on credit, we started getting delayed payments. This paucity of funds, in turn, meant that I could not make further imports. We realised it was time to diversify and enter the retail space. I decided to start a concept jewellery store.
+
+In May 2009, I leased a 1,200 sq ft store at Jalgaon, Maharashtra, and hired the services of an astrologer. We invested around Rs 37 lakh for gemstones and another Rs 18 lakh for one-gram jewellery. The idea was to offer our customers on-the-spot free astrology service to zero in on a suitable gemstone depending on their zodiac signs, but there was no compulsion to buy gemstones from us. However, most people who visited the store bought gemstones from us since we offered the cheapest rates.
+
+On the very first day, our retail outlet made a business of around Rs 1 lakh. We also gave an assurance that in case the suggested gemstone did not work, customers would get a 100 per cent refund. To handle this vertical, we registered a separate company, Suwarnsparsh Industries Private Limited.
+
+Buoyed by the response, we opened four more stores in Pune and Mumbai by the end of 2009. Our turnover in 2009-10 was around Rs 2.5 crore. Then, in 2011, we registered yet another company, Suwarnsparsh Gems and Jewellery Limited, and started manufacturing jewellery for our stores from a 6,000 sq ft factory at Vashi. This has brought down our costs by 70-80 per cent.
+
+Today, we have 52 outlets in different parts of Maharashtra and have a total staff strength of 550. We are now in talks with a couple of private equity firms for investing around Rs 50 crore in the business, which will help us expand to Delhi, Kolkata and Chennai. By 2017, we aim to set up 100 shops and breach the Rs 100 crore revenue mark.</p>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="indent">- In News | Indian Retailer -</h2>
+            <hr>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 fadeInUp">
+                    <div class="thumb-pad4 indent">
+                        <div class="thumbnail">
+                            <div class="caption">
+                            	<h4>Suwarnsparsh plans Rs 500 cr turnover via expansion</h4>
+                                <p>Suwarnsparsh, a prominent gemstone and jewellery retailer, said it is exploring options to raise Rs 40 crore through private equity to fund expansion to about 200 outlets in next five years on pan-India basis. Currently, the company has 42 outlets in Mumbai and Pune. Through the retail expansion the company aims to reach over Rs 500 crore turnovers in next five years. For the current fiscal the company aims  revenue of Rs 65-70 crore based on its current sales trend.
+
+The retailer, which currently generate about 75 per cent of its revenue from gemstone and the balance from one gram jewellery, expects to see increased contribution from the latter segment and garner revenue in equal proportion going forward.
+Speaking on development Suwarnsparsh Chairman and Managing Director Vimal Patel, said, "Unlike the organised retail industry, which is modeled on high volume low margin business, we operate a niche business with high margins derived from our insightful domain knowledge on the subject generated over the past two decades,"
+The astro gems market - a niche segment in the colour gemstone market is estimated at around Rs 5,000 crore, Patel informed.</p>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="indent">- In News | Loksatta -</h2>
+            <hr>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 fadeInUp">
+                    <div class="thumb-pad4 indent">
+                        <div class="thumbnail">
+                            <div class="caption">
+                            	<h4>सुवर्णमहोत्सवी दालन सज्जतेसह 'सुवर्णस्पर्श' लवकरच भांडवली बाजारात</h4>
+                                <p>रत्ने व दागिने क्षेत्रातील घाऊककडून किरकोळ असा गेल्या पाच वर्षांतील यशस्वी प्रवास पाहणाऱ्या 'सुवर्णस्पर्श'ने भांडवली बाजारात उतरण्याचा निर्णय घेतला असून समूह लवकरच मालमत्ता क्षेत्रातही धडकणार आहे.
+'सुवर्णस्पर्श'चे तरुण उद्योजक विमल पटेल यांनी आपला समूह नजीकच्या कालावधीत ३०० कोटी रुपयांच्या उलाढालीच्या उद्दिष्टासह, दालनांची साखळी १५० पर्यंत विस्तारण्याच्या तयारीत असल्याचे सांगितले.
+२३ मे २००९ मध्ये खान्देशातील जळगाव येथून 'सुवर्णस्पर्शा'स प्रारंभ झाल्यानंतर कंपनीने आता महाराष्ट्रातील सुवर्णमहोत्सवी दालनांचा टप्पा गाठला आहे. कंपनी ५० कोटी रुपये निधी उभारणीच' 'सुवर्णस्पर्श'च्या विस्तार नियोजनाबाबत बोलताना पटेल यांनी वर्षभरात १५० दालने तर दोन वर्षांच्या कालावधीत देशभरात दालने ७००च्या घरात असतील, असे सांगितले. ही दालने मोठय़ा शहरांबरोबर निमशहरे तसेच निवडक गावांमध्येही असतील, असेही ते म्हणाले. पहिल्या १५० दालनांपैकी निम्मी दालने ही अर्थातच महाराष्ट्रात असतील, असेही त्यांनी सांगितले.
+वयाच्या १८ वर्षी गुजरातमधून मुंबईत आलेल्या व दोन हजार रुपयांवर रत्ने व दागिन्यांच्या पॉलिशसाठी मजुरी मिळविणाऱ्या विमल यांनी 'तीन दशकांच्या कालावधीत ३६ लाख रुपयांच्या उत्पन्नामध्ये आयुष्य संपून जाईल' या अल्पसंतुष्टी तत्त्वज्ञानाला मागे टाकून 'सुवर्णस्पर्श' हा रत्नांचा अभ्यास व वापर या व्यवसायात पाच वर्षांपूर्वी शिरकाव केला.</p>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer-->
+<footer> 
+    <hr>
+    <div class="container">
+        <!--<figure><img src="img/foo_logo.png" alt=""></figure>-->
+        <p>&copy; Suwarn Sparsh <em id="copyright-year"></em> <span>|</span> <a href="index-5.html">Privacy Policy</a></p>
+    </div>
+</footer>
+<a href="#" id="toTop" class="fa fa-arrow-circle-up" style="display: inline;"></a>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/tm-scripts.js"></script>
+</body>
+</html>
